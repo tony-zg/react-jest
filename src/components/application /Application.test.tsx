@@ -1,8 +1,10 @@
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { Application } from './Application';
 
 describe('Application', () => {
   test('renders correctly', () => {
     render(<Application />);
+    const nameElement = screen.getAllByRole('textbox');
+    expect(nameElement).toBeInTheDocument();
   });
 });
