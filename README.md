@@ -99,3 +99,13 @@ Button element has a button role, anchor element has a link role, h1 to h6 eleme
 If you are working with elements that do not have a default role or if you want to specify a different role, the role attribute can be used to add the desired role
 
 To use an anchor element as a button in the navbar, you can add role='button'
+
+### getByRole Options
+
+<u>name</u>
+
+The accessible name is for simple cases equal to
+
+- the label of a form element
+- the text content of a button or
+- the value of the aria-label attribute
