@@ -86,7 +86,7 @@ The above methods need to be combined with a suffix to form a actual query, the 
 
 one of Role, LabelText, PlaceHolderText, Text, DisplayValue, AltText, Title and finally TestId
 
-### getByRole
+## getByRole
 
 getByRole queries for elements with the given role
 
@@ -100,7 +100,7 @@ If you are working with elements that do not have a default role or if you want 
 
 To use an anchor element as a button in the navbar, you can add role='button'
 
-### getByRole Options
+## getByRole Options
 
 <u>name</u>
 
@@ -109,3 +109,7 @@ The accessible name is for simple cases equal to
 - the label of a form element
 - the text content of a button or
 - the value of the aria-label attribute
+
+## getByLabelText
+
+getByLabelText will search for the label that matches the given text, then find the element associated with that label
