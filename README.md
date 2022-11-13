@@ -113,3 +113,31 @@ The accessible name is for simple cases equal to
 ## getByLabelText
 
 getByLabelText will search for the label that matches the given text, then find the element associated with that label
+
+## getByPlaceholderText
+
+getByPlaceholderText will search for all elements with a placeholder attribute and find one that matches the given text
+
+## getByText
+
+getByText will search for all elements that have a text node with text Content matching the given text
+
+Typically, use this to find p, div or span elements
+
+## getByDisplayValue
+
+getByDisplayValue returns the input, textarea, or select element that has the matching display value
+
+## getByAltText
+
+getByAltText will return the element that has the given alt text
+
+This method only supports elements which accept an alt attribute like <img>, <input>, <area> or custom HTML elements
+
+## getByTitle
+
+getByTitle returns the element that has the matching title attribute
+
+## getByTestId
+
+getByTestId returns the element that has the matching data-testid attribute
