@@ -1,4 +1,4 @@
-## Unit tests
+# Unit tests
 
 - Focus is on testing the individual building blocks of an application such as class or a function or a component
 - Each unit or building block is tested in isolation, independent of other units
@@ -6,23 +6,23 @@
 - Run in a short amount of time and make it very easy to pinpoint failures
 - Relatively easier to write and maintain
 
-## Integration tests
+# Integration tests
 
 - Focus is on testing a combination of units and ensuring they work together
 - Take longer than unit tests
 
-## E2E tests
+# E2E tests
 
 - Focus is on testing the entire application flow and ensuring it works as designed from strt to finish
 - Involves in a real UI, a real backend database, real services etc
 - Take the longest as they cover the most amount of code
 - Have a cost implication as you interact with real APIs that may charge based on the number of requests
 
-## Automated test
+# Automated test
 
 It is code that throws an error when the actual output does not match the expected output, it will pass when the output is correct and provide meaningful feedback when it is not
 
-## TDD
+# TDD
 
 Test driven development is a software development process where you wirte tests before writing the software code
 
@@ -43,20 +43,20 @@ Section Summary
 - Code coverage
 - Assertions
 
-## What to test?
+# What to test?
 
 - Test component renders
 - Test component renders with props
 - Test component renders in different states
 - Test component reacts to events
 
-## What not to test?
+# What not to test?
 
 - Implementation details
 - Third party code
 - Code that is not important from a user point of view
 
-## RTL Queries
+# RTL Queries
 
 Every test we write generally involves the follwing basic steps
 
@@ -86,7 +86,7 @@ The above methods need to be combined with a suffix to form a actual query, the 
 
 one of Role, LabelText, PlaceHolderText, Text, DisplayValue, AltText, Title and finally TestId
 
-## getByRole
+# getByRole
 
 getByRole queries for elements with the given role
 
@@ -100,7 +100,7 @@ If you are working with elements that do not have a default role or if you want 
 
 To use an anchor element as a button in the navbar, you can add role='button'
 
-## getByRole Options
+# getByRole Options
 
 <u>name</u>
 
@@ -110,34 +110,58 @@ The accessible name is for simple cases equal to
 - the text content of a button or
 - the value of the aria-label attribute
 
-## getByLabelText
+# getByLabelText
 
 getByLabelText will search for the label that matches the given text, then find the element associated with that label
 
-## getByPlaceholderText
+# getByPlaceholderText
 
 getByPlaceholderText will search for all elements with a placeholder attribute and find one that matches the given text
 
-## getByText
+# getByText
 
 getByText will search for all elements that have a text node with text Content matching the given text
 
 Typically, use this to find p, div or span elements
 
-## getByDisplayValue
+# getByDisplayValue
 
 getByDisplayValue returns the input, textarea, or select element that has the matching display value
 
-## getByAltText
+# getByAltText
 
 getByAltText will return the element that has the given alt text
 
 This method only supports elements which accept an alt attribute like <img>, <input>, <area> or custom HTML elements
 
-## getByTitle
+# getByTitle
 
 getByTitle returns the element that has the matching title attribute
 
-## getByTestId
+# getByTestId
 
 getByTestId returns the element that has the matching data-testid attribute
+
+# Priority Order for Queries
+
+"Your test should resemble how users interact with your code (component, page, etc) as much as possible"
+
+1. getByRole (accessible name such as button, heading etc)
+2. getByLabelText (good for form fields)
+3. getByPlaceholderText
+4. getByText (div, span and p)
+5. getByDisplayValue
+6. getByAltText (img, custom element)
+7. getByTitle
+8. getByTestId (where you cannot match by role or text or it doesn't make sense then use it, for example when the text is dynamic)
+
+# getAllBy Queries
+
+- getAllByRole
+- getAllByLabelText
+- getAllByPlaceholderText
+- getAllByText
+- getAllByDisplayValue
+- getAllByAltText
+- getAllByTitle
+- getAllByTestId
