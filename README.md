@@ -165,3 +165,24 @@ getByTestId returns the element that has the matching data-testid attribute
 - getAllByAltText
 - getAllByTitle
 - getAllByTestId
+
+# TextMatch
+
+TextMatch represents a type which can be either a
+
+- string
+<div>Hello World</div>
+screen.getByText('Hello World') // full string match 
+screen.getByText('llo, World', {exact: false}) // substring match
+screen.getByText('hello world', {exact: false}) // ignore case
+
+- regex
+<div>Hello World</div>
+screen.getByText(/World/) // substring match 
+screen.getByText(/world/i) //substring match, ignore case
+screen.getByText(/^hello world$/i) // full string match, ignore case
+
+- custom funciton
+( content? : string, element? : Element | null ) => boolean
+<div>Hello World</div>
+screen.getByText(content) => content.startsWith('Hello')
