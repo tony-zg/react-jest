@@ -198,3 +198,27 @@ screen.getByText(content) => content.startsWith('Hello')
 ## queryAllBy
 
 - Returns an array of all matching nodes for a query, and return an empty array if no elements match
+
+# Queries so far
+
+getBy and getAllBy class of queries to assert if elements are presnet in the DOM
+
+queryBy and queryAllBy class of queries of assert if elements are not present in the DOM
+
+# Appearance / Disappearance
+
+What if elements are not present in the DOM to begin but make their way into the DOM after some time?
+
+For example, data that is fetched from a server will be rendered only afer a few milliseconds
+
+## findBy and findAllBy
+
+findBy
+
+- Returns a Promise which resolves when an element is found which matches the given query
+- The promise is rejected if no element is found or if more than one element is found after a default timeout of 1000ms
+
+findAllBy
+
+- Returns a promise which resolves to an array of elements when any elments are found which match the given query
+- The promise is rejected if no elements are found after a default timeout of 1000ms

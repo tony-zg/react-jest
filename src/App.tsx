@@ -8,6 +8,7 @@ function App() {
   return (
     <div className="App">
       <Application />
+      <Skills skills={['html', 'css', 'js']} />
     </div>
   );
 }
